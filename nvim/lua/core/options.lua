@@ -18,3 +18,10 @@ vim.opt.shiftround = true -- round indent to sw compatible
 vim.opt.expandtab = true
 
 vim.opt.termguicolors = true
+
+if vim.bo.filetype == "c" then
+  vim.opt.tabstop = 4
+  vim.opt.shiftwidth = 4
+elseif vim.bo.filetype == "make" then
+  vim.opt.expandtab = false
+end

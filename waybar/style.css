@@ -1,4 +1,4 @@
-@import url("./catppuccin/themes/mocha.css");
+@import url("./knuckles-night/color.css");
 
 * {
   font-family: "JetBrainsMono Nerd Font", "Noto Sans", "Font Awesome 6 Free", sans-serif;
@@ -8,59 +8,52 @@
 
 #waybar {
   background: transparent;
-  color: @text;
+  color: @fg;
   margin: 5px 5px;
 }
 
 #workspaces {
-  border-radius: 1rem;
+  border-radius: 0.25rem;
   margin: 5px;
-  background-color: @surface0;
+  background-color: @bg;
   margin-left: 1rem;
 }
 
 #workspaces button {
-  color: @lavender;
-  border-radius: 1rem;
+  color: @violet;
+  border-radius: 0.25rem;
 }
 
 #workspaces button.active {
-  color: @maroon;
-  border-radius: 1rem;
+  color: @red;
+  border-radius: 0.25rem;
 }
 
 #workspaces button:hover {
-  color: @blue;
-  border-radius: 1rem;
+  color: @red;
+  border-radius: 0.25rem;
 }
 
 #memory,
 #cpu,
 #network,
 #window,
-#custom-music,
-#tray,
-#backlight,
 #clock,
 #battery,
-#pulseaudio,
-#custom-lock,
-#language,
-#cava,
-#custom-power {
-  background-color: @surface0;
+#pulseaudio {
+  background-color: @bg;
   padding: 0.5rem 1rem;
   margin: 5px 0;
 }
 
 #window {
- color: @red;
- border-radius: 1rem 0px 0px 1rem;
+ color: @fg;
+ border-radius: 0.25rem 0px 0px 0.25rem;
 }
 
 #clock {
   color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
+  border-radius: 0px 0.25rem 0.25rem 0px;
 }
 
 #battery {
@@ -79,15 +72,13 @@
   color: @yellow;
 }
 
-#backlight,
 #battery {
   border-radius: 0;
 }
 
 #pulseaudio {
-  color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
+  color: @magenta;
+  border-radius: 0.25rem 0px 0px 0.25rem;
 }
 
 #network {
@@ -97,44 +88,15 @@
 }
 
 #cpu {
-  color: @mauve;
+  color: @violet;
   margin-left: 0;
   padding-left: 5px;
 }
 
 #memory {
-  color: @yellow;
-  border-radius: 0px 1rem 1rem 0px;
+  color: @yellow2;
+  border-radius: 0px 0.25rem 0.25rem 0px;
   margin-right: 1rem;
-}
-
-#cava {
-  color: @pink;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
-  margin-right: 0;
-  padding-right: 0;
-}
-
-#custom-music {
-  color: @mauve;
-  border-radius: 1rem;
-}
-
-#language {
-  border-radius: 1rem 0px 0px 1rem;
-  color: @lavender;
-}
-
-#custom-power {
-  margin-right: 1rem;
-  border-radius: 0px 1rem 1rem 0px;
-  color: @red;
-}
-
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
 }
 
 #workspaces button.urgent {

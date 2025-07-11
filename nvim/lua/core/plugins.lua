@@ -115,6 +115,18 @@ return require('packer').startup(function(use)
         end,
       }
 
+      -- use {
+      --   "goolord/alpha-nvim",
+      --   dependencies = { 'nvim-tree/nvim-web-devicons' },
+      --   config = function()
+      --     local startify = require("alpha.themes.startify")
+      --     startify.file_icons.provider = "devicons"
+      --     require("alpha").setup(
+      --       startify.config
+      --     )
+      --   end,
+      -- }
+
       -- Register shellcheck for *.sh
       lint.linters_by_ft = {
         sh = { "shellcheck" },
