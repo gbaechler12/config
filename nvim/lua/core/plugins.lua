@@ -129,18 +129,7 @@ return require('packer').startup(function(use)
     end
   }
 
-  use {
-    "neovim/nvim-lspconfig",
-    config = function()
-      local lspconfig = require("lspconfig")
-      lspconfig.clangd.setup({
-        cmd = { "clangd" },
-        filetypes = { "c", "cpp", "objc", "objcpp" },
-        root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
-        capabilities = require("cmp_nvim_lsp").default_capabilities(),
-      })
-    end
-  }
+  use "neovim/nvim-lspconfig"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
