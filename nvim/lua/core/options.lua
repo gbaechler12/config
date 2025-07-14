@@ -19,9 +19,32 @@ vim.opt.expandtab = true
 
 vim.opt.termguicolors = true
 
-if vim.bo.filetype == "c" then
-  vim.opt.tabstop = 4
-  vim.opt.shiftwidth = 4
-elseif vim.bo.filetype == "make" then
-  vim.opt.expandtab = false
-end
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "c", "cpp", "objc", "objcpp" },
+  callback = function()
+    vim.bo.expandtab = true
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "make" },
+  callback = function()
+    vim.bo.expandtab = false
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    -- fallback par défaut : 2 espaces
+    if vim.bo.filetype ~= "c" and vim.bo.filetype ~= "cpp" and vim.bo.filetype ~= "make" then
+      vim.bo.expandtab = true
+      vim.bo.shiftwidth = 2
+      vim.bo.tabstop = 2
+    end
+  end,
+})

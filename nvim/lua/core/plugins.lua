@@ -115,18 +115,6 @@ return require('packer').startup(function(use)
         end,
       }
 
-      -- use {
-      --   "goolord/alpha-nvim",
-      --   dependencies = { 'nvim-tree/nvim-web-devicons' },
-      --   config = function()
-      --     local startify = require("alpha.themes.startify")
-      --     startify.file_icons.provider = "devicons"
-      --     require("alpha").setup(
-      --       startify.config
-      --     )
-      --   end,
-      -- }
-
       -- Register shellcheck for *.sh
       lint.linters_by_ft = {
         sh = { "shellcheck" },
@@ -141,6 +129,18 @@ return require('packer').startup(function(use)
     end
   }
 
+  use {
+    "neovim/nvim-lspconfig",
+    config = function()
+      local lspconfig = require("lspconfig")
+      lspconfig.clangd.setup({
+        cmd = { "clangd" },
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+        root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+        capabilities = require("cmp_nvim_lsp").default_capabilities(),
+      })
+    end
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
