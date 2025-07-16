@@ -50,7 +50,7 @@
 
 #clock {
   color: @blue;
-  border-left: 1px solid #bbb;
+  border-left: 1px solid #333;
 }
 
 #battery {
