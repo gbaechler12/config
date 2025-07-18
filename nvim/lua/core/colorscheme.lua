@@ -19,18 +19,18 @@ local knight_colors = {
 }
 
 local kzen_colors = {
-  bg        = "#f2efe6",
+  bg        = "#f9ead6",
   fg        = "#2e2e2e",
   muted     = "#6e6e6e",
   accent    = "#3a7ecf",
   cursor    = "#3a7ecf",
   selection = "#dce6f8",
   red       = "#e06c75",
-  green     = "#98c379",
+  green     = "#88b369",
   yellow    = "#e5c07b",
-  blue      = "#61afef",
+  blue      = "#51bfdf",
   purple    = "#c678dd",
-  cyan      = "#56b6c2",
+  cyan      = "#46a6b2",
 }
 
 function M.colorscheme(name)
