@@ -24,13 +24,30 @@ local kzen_colors = {
   muted     = "#6e6e6e",
   accent    = "#3a7ecf",
   cursor    = "#3a7ecf",
-  selection = "#dce6f8",
   red       = "#e06c75",
   green     = "#88b369",
   yellow    = "#e5c07b",
   blue      = "#51bfdf",
   purple    = "#c678dd",
   cyan      = "#46a6b2",
+}
+
+
+local kzen_dark_colors = {
+  bg = "#1c1c24",
+  fg = "#dcd7ba",
+  selection = "#2c2c34",
+  cursor = "#a9b1d6",
+  comment = "#878e99",
+  red = "#f7768e",
+  green = "#9ece6a",
+  yellow = "#e0af68",
+  blue = "#7aa2f7",
+  magenta = "#bb9af7",
+  cyan = "#7dcfff",
+  gray = "#3b4261",
+  lightgray = "#565f89",
+  violet = '#c8b6ff',
 }
 
 function M.colorscheme(name)
@@ -110,7 +127,42 @@ function M.colorscheme(name)
     set(0, "Error", { fg = colors.red, bold = true })
 
     set(0, "RenderMarkdownCode", { bg = "#eeeeee" })  
-    set(0, "RenderMarkdownCodeBorder", { bg = "#dddddd" }) 
+    set(0, "RenderMarkdownCodeBorder", { bg = "#dddddd" })
+  elseif name == "knuckles-zen-dark" then
+    vim.o.background = 'dark'
+    local colors = kzen_dark_colors
+    set(0, "Normal", { bg = colors.bg, fg = colors.fg })
+    set(0, "Visual", { bg = colors.selection })
+    set(0, "Comment", { fg = colors.comment, italic = true })
+    set(0, "LineNr", { fg = colors.fg })
+
+    set(0, "Constant", { fg = colors.purple, bold = true })
+
+    set(0, "String", { fg = colors.green })
+    set(0, "Character", { fg = colors.green })
+    set(0, "SpecialChar", { fg = colors.violet })
+    set(0, "Number", { fg = colors.red })
+    set(0, "Float", { fg = colors.red })
+    set(0, "Boolean", { fg = colors.red })
+
+    set(0, "Type", { fg = colors.yellow })
+    set(0, "Identifier", { fg = colors.cyan })
+    set(0, "Function", { fg = colors.blue })
+
+    set(0, "Keyword", { fg = colors.red })
+    set(0, "Statement", { fg = colors.red })
+    set(0, "Repeat", { fg = colors.red })
+    set(0, "Label", { fg = colors.red })
+
+    set(0, "PreProc", { fg = colors.purple })
+    set(0, "Macros", { fg = colors.purple })
+    set(0, "Define", { fg = colors.purple })
+
+    set(0, "Special", { fg = colors.purple })
+    set(0, "Error", { fg = colors.red, bold = true })
+
+    set(0, "RenderMarkdownCode", { bg = "#eeeeee" })  
+    set(0, "RenderMarkdownCodeBorder", { bg = "#dddddd" })
   end
 end
 

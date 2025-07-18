@@ -1,4 +1,4 @@
-@import url("./knuckles-zen/color.css");
+@import url("./knuckles-zen-dark/color.css");
 
 * {
   font-family: "JetBrainsMono Nerd Font", "Noto Sans", "Font Awesome 6 Free", sans-serif;
@@ -23,7 +23,7 @@
 }
 
 #workspaces button.active {
-  color: @fg;
+  color: @red;
 }
 
 #workspaces button:hover {
@@ -31,7 +31,7 @@
 }
 
 #workspaces button.urgent {
-  color: @fg;
+  color: @red;
 }
 
 #memory,
@@ -55,29 +55,29 @@
 }
 
 #battery {
-  color: @fg;
+  color: @green;
 }
 
 #battery.charging {
-  color: @fg;
+  color: @green;
 }
 
 #battery.warning:not(.charging) {
-  color: @fg;
+  color: @red;
 }
 
 #pulseaudio {
-  color: @fg;
+  color: @red;
 }
 
 #network {
-  color: @fg;
+  color: @yellow;
 }
 
 #cpu {
-  color: @fg;
+  color: @violet;
 }
 
 #memory {
-  color: @fg;
+  color: @yellow;
 }

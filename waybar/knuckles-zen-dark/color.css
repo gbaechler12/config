@@ -1,0 +1,29 @@
+@define-color bg            #1a1c22;
+@define-color bg-alt        #23262e;
+@define-color fg            #dce0e8;
+@define-color fg-muted      #a3a9b9;
+@define-color accent        #7aa2f7;
+@define-color red           #e06c75;
+@define-color green         #98c379;
+@define-color yellow        #e5c07b;
+@define-color orange        #d19a66;
+@define-color magenta       #c678dd;
+@define-color cyan          #56b6c2;
+@define-color blue          #61afef;
+@define-color violet        #b4befe;
+@define-color comment       #5c6370;
+
+@define-color border        #2c2f36;
+@define-color highlight     #3a3f4b;
+@define-color selection     #3c4451;
+@define-color selection-fg  #dce0e8;
+
+@define-color warning       #f9e2af;
+@define-color error         #f38ba8;
+@define-color success       #a6e3a1;
+
+@define-color button-bg     #2a2d34;
+@define-color button-fg     #dcdfe4;
+@define-color input-bg      #252830;
+@define-color input-fg      #e0e6f0;
+
