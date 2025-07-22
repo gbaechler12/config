@@ -36,12 +36,13 @@ local kzen_colors = {
 local kzen_dark_colors = {
   bg = "#1c1c24",
   fg = "#dcd7ba",
-  selection = "#2c2c34",
+  selection = "#4c4c54",
   cursor = "#a9b1d6",
   comment = "#878e99",
   red = "#f7768e",
   green = "#9ece6a",
   yellow = "#e0af68",
+  yellow2 = '#ffe6a7',
   blue = "#7aa2f7",
   magenta = "#bb9af7",
   cyan = "#7dcfff",
@@ -146,7 +147,7 @@ function M.colorscheme(name)
     set(0, "Boolean", { fg = colors.red })
 
     set(0, "Type", { fg = colors.yellow })
-    set(0, "Identifier", { fg = colors.cyan })
+    set(0, "Identifier", { fg = colors.yellow2 })
     set(0, "Function", { fg = colors.blue })
 
     set(0, "Keyword", { fg = colors.red })

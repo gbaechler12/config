@@ -114,3 +114,34 @@ config.set('content.local_content_can_access_remote_urls', True, 'file:///home/g
 # Allow locally loaded documents to access other local URLs.
 # Type: Bool
 config.set('content.local_content_can_access_file_urls', False, 'file:///home/guilhem/.local/share/qutebrowser/userscripts/*')
+
+
+# Soft dark theme colors (adapt to your custom palette)
+c.colors.completion.category.bg = '#2b2e3e'
+c.colors.completion.category.fg = '#cdd6f4'
+c.colors.completion.fg = '#d9e0ee'
+c.colors.completion.odd.bg = '#313244'
+c.colors.completion.even.bg = '#292c3c'
+c.colors.completion.item.selected.bg = '#89b4fa'
+c.colors.completion.item.selected.fg = '#1e1e2e'
+
+c.colors.statusbar.normal.bg = '#1e1e2e'
+c.colors.statusbar.normal.fg = '#cdd6f4'
+
+c.colors.statusbar.insert.bg = '#89b4fa'
+c.colors.statusbar.insert.fg = '#1e1e2e'
+
+c.colors.tabs.bar.bg = '#1e1e2e'
+c.colors.tabs.even.bg = '#292c3c'
+c.colors.tabs.odd.bg = '#313244'
+c.colors.tabs.selected.even.bg = '#89b4fa'
+c.colors.tabs.selected.odd.bg = '#89b4fa'
+c.colors.tabs.selected.even.fg = '#1e1e2e'
+c.colors.tabs.selected.odd.fg = '#1e1e2e'
+
+c.colors.webpage.bg = '#1e1e2e'
+
+# Optional: Hide statusbar in normal mode for minimalism
+# c.statusbar.show = 'never'
+
+

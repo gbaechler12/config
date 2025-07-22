@@ -48,7 +48,7 @@ return require('packer').startup(function(use)
         },
         view = {
           width = 30,
-          side = "left",
+          side = "right",
         },
         renderer = {
           highlight_git = true,
