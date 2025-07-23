@@ -14,12 +14,9 @@ hypr_status=""
 DEVICE="device[asue140d:00-04f3:31b9-touchpad]:enabled"
 
 if [[ "$status" == "Enabled" ]]; then
-  status="Disabled"
-  hypr_status="false"
-else
-  status="Enabled"
   hypr_status="true"
+else
+  hypr_status="false"
 fi
 
 hyprctl keyword "$DEVICE" "$hypr_status" && notify-send "Touchpad" "$status"
-echo "$status" > "$STATUS_FILE"

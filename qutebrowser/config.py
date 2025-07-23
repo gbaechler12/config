@@ -144,4 +144,3 @@ c.colors.webpage.bg = '#1e1e2e'
 # Optional: Hide statusbar in normal mode for minimalism
 # c.statusbar.show = 'never'
 
-
