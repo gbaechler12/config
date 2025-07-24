@@ -35,6 +35,7 @@ local kzen_colors = {
 
 local kzen_dark_colors = {
   bg = "#1c1c24",
+  bg_darker = "#14141a",
   fg = "#dcd7ba",
   selection = "#2c2c34",
   cursor = "#a9b1d6",
@@ -162,8 +163,8 @@ function M.colorscheme(name)
     set(0, "Special", { fg = colors.purple })
     set(0, "Error", { fg = colors.red, bold = true })
 
-    set(0, "RenderMarkdownCode", { bg = "#eeeeee" })  
-    set(0, "RenderMarkdownCodeBorder", { bg = "#dddddd" })
+    set(0, "RenderMarkdownCode", { bg = colors.bg_darker })  
+    set(0, "RenderMarkdownCodeBorder", { bg = colors.bg })
   end
 end
 
