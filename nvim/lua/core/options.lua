@@ -10,6 +10,7 @@ vim.opt.mouse = 'a' -- Enable mouse mode, can be useful for resizing splits for 
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
+vim.opt.wrap = false
 
 -- use spaces for tabs and whatnot
 vim.opt.tabstop = 2
