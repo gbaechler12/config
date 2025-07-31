@@ -35,6 +35,7 @@
 }
 
 #memory,
+#bluetooth,
 #cpu,
 #network,
 #window,
@@ -72,6 +73,10 @@
 
 #network {
   color: @yellow;
+}
+
+#bluetooth {
+  color: @blue;
 }
 
 #cpu {
