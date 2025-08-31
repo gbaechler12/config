@@ -141,6 +141,29 @@ return require('packer').startup(function(use)
         require('render-markdown').setup({})
     end,
   }
+
+  -- LaTeX support
+  use {
+    "lervag/vimtex",
+    lazy = false, -- load immediately
+    init = function()
+      -- example: use zathura as pdf viewer
+      vim.g.vimtex_view_method = "zathura"
+      vim.g.vimtex_compiler_method = "latexmk"
+    end,
+  }
+
+  -- Snippets engine
+  use {
+    "L3MON4D3/LuaSnip",
+    dependencies = {
+      "rafamadriz/friendly-snippets", -- a big collection of snippets, includes LaTeX
+    },
+    config = function()
+      require("luasnip.loaders.from_vscode").lazy_load()
+    end,
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

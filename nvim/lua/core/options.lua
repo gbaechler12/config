@@ -53,6 +53,13 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "tex",
+  callback = function()
+    vim.opt.spell = true
+    vim.opt.spelllang = { "fr", "en" }
+  end,
+})
 
 -- ============================================================================
 -- STATUSLINE
